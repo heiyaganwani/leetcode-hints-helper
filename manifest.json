@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Hint Helper",
+  "version": "1.0",
+  "description": "Shows helpful hints on LeetCode problem pages.",
+  "permissions": [],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/problems/*",
+        "https://leetcode.com/problems/*/*",
+        "https://leetcode.com/problems/*/*/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
